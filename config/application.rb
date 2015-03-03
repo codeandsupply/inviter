@@ -25,7 +25,7 @@ module Inviter
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins "tech404.io", "www.tech404.io", "localhost:4000"
+        origins "codeandsupply.co", "www.codeandsupply.co"
         resource "/invitations",
           headers: :any,
           methods: [:post],
