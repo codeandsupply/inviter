@@ -18,6 +18,7 @@ gem 'sidekiq', '~> 3.3', '>= 3.3.1'
 gem 'sinatra', '~> 1.4', '>= 1.4.5', :require => nil
 
 gem 'virtus', '~> 1.0', '>= 1.0.4'
+gem 'sidekiq-failures'
 
 group :development, :test do
   gem 'byebug'

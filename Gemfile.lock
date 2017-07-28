@@ -173,6 +173,8 @@ GEM
       json
       redis (>= 3.0.6)
       redis-namespace (>= 1.3.1)
+    sidekiq-failures (0.4.5)
+      sidekiq (>= 2.16.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -229,9 +231,16 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sidekiq (~> 3.3, >= 3.3.1)
+  sidekiq-failures
   sinatra (~> 1.4, >= 1.4.5)
   spring
   turbolinks
   uglifier (>= 1.3.0)
   virtus (~> 1.0, >= 1.0.4)
   web-console (~> 2.0)
+
+RUBY VERSION
+   ruby 2.2.0p0
+
+BUNDLED WITH
+   1.15.3
