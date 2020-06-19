@@ -14,7 +14,7 @@ gem 'sdoc', '~> 1.1.0', group: :doc
 
 gem 'rack-cors', '~> 0.3', '>= 0.3.1'
 
-gem 'sidekiq', '~> 5.2.9'
+gem 'sidekiq', '~> 6.0.7'
 gem 'sinatra', '~> 2.0', :require => nil
 
 gem 'virtus', '~> 1.0', '>= 1.0.4'
