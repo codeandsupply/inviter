@@ -1,10 +1,10 @@
-# tech404 inviter
+# C&S Slack inviter
 
-The application behind the [tech404 automatic invitation system](http://tech404.io)
+Forked from [tech404/inviter](https://github.com/tech404/inviter), the application behind the [tech404 automatic invitation system](http://tech404.io).
 
 ## Usage
 
-### POST /invitations
+### `POST /invitations`
 
 To enqueue an invitation request:
 
@@ -15,24 +15,26 @@ curl -X POST \
   http://localhost:3000/invitations
 ```
 
-The route is meant to be used by a JavaScript client. You can whitelist CORS origins in `config/application.rb`.
+The route is meant to be used by a JavaScript client. You can whitelist CORS origins in `config/initializers/cors.rb`.
 
 ## Development
 
 ### Prerequisites
 
 * PostgreSQL: `brew install postgresql`
-* Redis: `brew install redis`
+* Redis: `brew install redis` or `docker run -d --rm redis` and prepend `rails`
+    with `REDISTOGO_URL=redis://localhost6379` to set the required envvar.
 
 ### Required Configuration
 
 Configuration items are stored in environment variables.
 
-* SLACK_SUBDOMAIN: e.g., tech404 for tech404.slack.com
-* SLACK_TOKEN: an API token for an administrator of the organization
-* SIDEKIQ_USERNAME: username for the sidekiq administration area
-* SIDEKIQ_PASSWORD: password for the sidekiq administration area
+* `SLACK_SUBDOMAIN`: e.g., tech404 for tech404.slack.com
+* `SLACK_TOKEN`: an API token for an administrator of the organization
+* `SIDEKIQ_USERNAME`: username for the sidekiq administration area
+* `SIDEKIQ_PASSWORD`: password for the sidekiq administration area
 
 ## Deployment
 
-Deployed on Heroku. Ask @alindeman for access. In production, we run a puma process in the same dyno as a sidekiq worker. It's a hack to keep it free.
+Deployed on Heroku. In production, we run a puma process in the same dyno as a sidekiq worker. It's a hack to keep it free.
+
