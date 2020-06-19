@@ -12,3 +12,4 @@ end
 
 Rails.application.config.hosts << 'codeandsupply.co'
 Rails.application.config.hosts << 'www.codeandsupply.co'
+Rails.application.config.hosts << 'fierce-temple-7331.herokuapp.com'
