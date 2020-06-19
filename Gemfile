@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.0"
+ruby "2.6.5"
 
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -29,6 +29,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'puma', '~> 2.11'
+  gem 'puma'
   gem 'rails_12factor', '~> 0.0', '>= 0.0.3'
 end
