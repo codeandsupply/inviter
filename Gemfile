@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.10'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', '~> 1.1.0', group: :doc
 
 gem 'rack-cors', '~> 0.3', '>= 0.3.1'
 
