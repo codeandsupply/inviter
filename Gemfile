@@ -26,6 +26,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 4.0'
   gem 'foreman', '~> 0.77'
+  gem 'listen'
 end
 
 group :production do
