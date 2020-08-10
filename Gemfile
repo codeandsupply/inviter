@@ -25,7 +25,7 @@ group :development, :test do
   gem 'web-console', '~> 4.0'
   gem 'spring'
   gem 'rspec-rails', '~> 4.0'
-  gem 'foreman', '~> 0.77'
+  gem 'foreman', '~> 0.87'
   gem 'listen'
 end
 
