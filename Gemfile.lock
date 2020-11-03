@@ -189,7 +189,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sdoc (1.1.0)
+    sdoc (2.0.0)
       rdoc (>= 5.0)
     sidekiq (5.2.9)
       connection_pool (~> 2.2, >= 2.2.2)
@@ -253,7 +253,7 @@ DEPENDENCIES
   rails_12factor (~> 0.0, >= 0.0.3)
   rspec-rails (~> 4.0)
   sass-rails (~> 6.0)
-  sdoc (~> 1.1.0)
+  sdoc (~> 2.0.0)
   sidekiq (~> 5.2.9)
   sidekiq-failures
   sinatra (~> 2.1)
