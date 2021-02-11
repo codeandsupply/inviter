@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.6.5"
 
-gem 'rails', '6.0.3.4'
+gem 'rails', '6.1.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
