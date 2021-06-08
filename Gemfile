@@ -17,7 +17,7 @@ gem 'rack-cors', '~> 1.1'
 gem 'sidekiq', '~> 5.2.9'
 gem 'sinatra', '~> 2.1', :require => nil
 
-gem 'virtus', '~> 1.0', '>= 1.0.4'
+gem 'virtus', '~> 2.0'
 gem 'sidekiq-failures'
 
 group :development, :test do
