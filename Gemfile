@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.6.5"
+ruby "2.7.6"
 
 gem 'rails', '6.0.3.4'
 gem 'pg'
@@ -20,12 +20,13 @@ gem 'sinatra', '~> 2.1', :require => nil
 gem 'virtus', '~> 1.0', '>= 1.0.4'
 gem 'sidekiq-failures'
 
+gem 'foreman', '~> 0.87'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 4.1'
   gem 'spring'
   gem 'rspec-rails', '~> 4.0'
-  gem 'foreman', '~> 0.87'
   gem 'listen'
 end
 
