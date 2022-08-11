@@ -23,7 +23,7 @@ The route is meant to be used by a JavaScript client. You can whitelist CORS ori
 
 * PostgreSQL: `brew install postgresql`
 * Redis: `brew install redis` or `docker run -d --rm redis` and prepend `rails`
-    with `REDISTOGO_URL=redis://localhost:6379` to set the required envvar.
+    with `REDIS_URL=redis://localhost:6379` to set the required envvar.
 
 ### Required Configuration
 
