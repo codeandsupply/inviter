@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.7.6"
 
-gem 'rails', '6.0.3.4'
+gem 'rails', '7.0.4'
 gem 'pg'
 gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
@@ -14,7 +14,8 @@ gem 'sdoc', '~> 2.0.3', group: :doc
 
 gem 'rack-cors', '~> 1.1'
 
-gem 'sidekiq', '~> 5.2.9'
+gem 'sidekiq', '~> 7.0'
+gem 'redis', '~> 5.0'
 gem 'sinatra', '~> 2.1', :require => nil
 
 gem 'virtus', '~> 1.0', '>= 1.0.4'
