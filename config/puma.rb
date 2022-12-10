@@ -8,15 +8,6 @@ environment ENV['RACK_ENV'] || 'development'
 
 preload_app!
 
-if ENV["RAILS_ENV"] == "production" || ENV["RACK_ENV"] == "production"
-  before_fork do
-      @sidekiq_pid ||= spawn('bundle exec sidekiq -t 25')
-  end
-  on_restart do
-    Sidekiq.redis.shutdown { |conn| conn.close }
-  end
-end
-
 on_worker_boot do
   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 end
