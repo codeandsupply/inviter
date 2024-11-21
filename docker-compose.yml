@@ -1,0 +1,58 @@
+services:
+  redis:
+    image: redis:latest
+    networks:
+      - codeandsupply-network
+
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - db:/var/lib/postgresql/data
+    networks:
+      - codeandsupply-network
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    environment:
+      - RAILS_ENV=development
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgres://postgres:postgres@db/inviter_development
+      - POSTGRES_HOST=db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - codeandsupply-network
+    ports:
+      - "5000:5000"
+      - "1049:1049"
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - .:/codeandsupply.co
+      - bundler:/usr/local/bundle
+      - assets:/codeandsupply.co/public/assets
+      - assetscache:/codeandsupply.co/tmp/cache/assets
+      - gemcache:/codeandsupply.co/vendor/cache
+      # for debugging
+      - bundler:/mnt/bundle
+      - assets:/mnt/assets
+      - assetscache:/mnt/assetscache
+      - gemcache:/mnt/gemcache
+    entrypoint: ["tail", "-f", "/dev/null"]
+
+networks:
+  codeandsupply-network:
+
+volumes:
+  db:
+  bundler:
+  assets:
+  assetscache:
+  gemcache:
