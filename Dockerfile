@@ -5,7 +5,7 @@
 # The common image gives us all of the system packages upon which the stack
 # depends. We want to rebuild this as infrequently as possible, so as many
 # things as possible have been nailed down by checksums.
-FROM ruby:2.7.8 AS common
+FROM ruby:3.3.5 AS common
 
 # Create a non-root user; it's best practice not to run a container with the root user
 RUN useradd --create-home --shell /bin/bash codeandsupply
@@ -67,6 +67,8 @@ RUN apt-fast install --yes \
         lsb-release \
         netselect-apt \
         nodejs
+
+RUN gem update --system
 
 # Yarn is used for frontend stuff just like Node
 RUN npm install --global --force yarn@1.22.22
