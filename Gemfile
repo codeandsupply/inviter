@@ -25,13 +25,17 @@ gem 'foreman', '~> 0.87'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 4.1'
-  gem 'spring'
-  gem 'rspec-rails', '~> 4.0'
   gem 'listen'
+  gem 'rspec-rails', '~> 4.0'
+  gem 'spring'
+  gem 'web-console', '~> 4.1'
 end
 
 group :production do
   gem 'puma'
   gem 'rails_12factor', '~> 0.0', '>= 0.0.3'
 end
+
+gem "pry", "= 0.15.0", :groups => [:development, :test]
+
+gem "rubocop", "= 1.68", :groups => [:development, :test]
