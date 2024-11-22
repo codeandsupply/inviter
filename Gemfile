@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '2.7.8'
+ruby '3.3.5'
 
 gem 'coffee-rails', '~> 5.0.0'
 gem 'foreman', '~> 0.87'
@@ -12,7 +12,6 @@ gem 'rack-cors', '~> 1.1'
 gem 'rails', '7.0.4'
 gem 'redis', '~> 5.0'
 gem 'sass-rails', '~> 6.0'
-gem 'sdoc', '~> 2.0.3', group: :doc
 gem 'sidekiq', '~> 7.0'
 gem 'sidekiq-failures'
 gem 'sinatra', '~> 2.1', require: nil
